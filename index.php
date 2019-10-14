@@ -35,7 +35,8 @@ exec("tail -n 50 /var/log/ssh/ssh.log", $sshLogs);
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <div>
+  <h1><?php echo strtoupper($hostname);?></h1>
+  <div class="mainDiv">
   <h2>System Information</h2>
   <table border="1">
     <tr><td><b>Hostname</b></td><td><?php echo $hostname; ?></td></tr>
@@ -45,7 +46,6 @@ exec("tail -n 50 /var/log/ssh/ssh.log", $sshLogs);
     <tr><td><b>OS Release</b></td><td><?php echo $release; ?></td></tr>
     <tr><td><b>Kernel Version</b></td><td><?php echo $kernel; ?></td></tr>
   </table>
-  <br />
   <h2>Logged in User(s)</h2>
   <table border="1">
     <tr><th>User ID</th><th>Process ID</th><th>Parent Process ID</th><th>CPU Usage (%)</th><th>Memory Usage (%)</th><th>Start Time</th><th>Process Status</th><th>CPU Time</th><th>Command</th></tr>
@@ -86,9 +86,9 @@ exec("tail -n 50 /var/log/ssh/ssh.log", $sshLogs);
     }
     ?>
  </table>
- <br />
  <h2>Recent Log</h2>
- <table border="1">
+ <div class="logDiv">
+   <table border="1">
    <?php
    foreach ($sshLogs as $log) {
      ?>
@@ -102,7 +102,8 @@ exec("tail -n 50 /var/log/ssh/ssh.log", $sshLogs);
      <?php
    }
    ?>
- </table>
+  </table>
+</div>
 </div>
 </body>
 </html>

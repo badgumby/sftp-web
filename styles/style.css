@@ -1,18 +1,26 @@
 body {
 background-color:#272727;
 overflow-x: hidden;
-overflow-y: scroll;
+overflow-y: auto;
 font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+text-align: center;
+color:#6A92D4;
+padding-top: 2%;
+}
+
 h2 {
 color:#6A92D4;
+margin-bottom: 5px;
 }
+
 table{
 width:100%;
 border-collapse:collapse;
 table-layout:auto;
 vertical-align:top;
-margin-bottom:15px;
 border:1px solid #999999;
 }
 
@@ -46,10 +54,21 @@ color:#CCCCCC;
 background-color:#333333;
 }
 
-div {
+
+.logTable td {
+text-align: left;
+}
+
+.mainDiv {
 padding-left: 5%;
 padding-right: 5%;
 margin-left: 5%;
 margin-right: 5%;
-margin-top: 5%;
+}
+
+.logDiv {
+border: 1px solid #CCC;
+overflow-y: scroll;
+overflow-x: hidden;
+height: 35%;
 }
