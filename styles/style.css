@@ -3,6 +3,7 @@ background-color:#272727;
 overflow-x: hidden;
 overflow-y: auto;
 font-family: 'Roboto', sans-serif;
+color: #6a92d4;
 }
 
 h1 {
@@ -14,6 +15,14 @@ padding-top: 2%;
 h2 {
 color:#6A92D4;
 margin-bottom: 5px;
+}
+
+a {
+  color: #8db2f0;
+}
+
+a:visited, a:active, a:hover {
+  color: white;
 }
 
 table{
